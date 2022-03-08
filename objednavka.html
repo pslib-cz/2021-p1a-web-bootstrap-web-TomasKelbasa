@@ -5,12 +5,38 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-</head>
+    <script>
+      var input = document.getElementById("cuponinput");
+      input.addEventListener("keyup", function(event) {
+          // Number 13 is the "Enter" key on the keyboard
+          if (event.keyCode === Enter) {
+          // Cancel the default action, if needed
+          event.preventDefault();
+          // Trigger the button element with a click
+          document.getElementById("cuponbutton").click();
+      }
+      });
+
+      function getVal() {
+        const val = document.getElementById("cuponinput").value;
+        console.log(val);
+        if (val == "michal.stehlik@pslib.cz"){
+          window.location.replace("https://www.youtube.com/watch?v=MkguxyRm9Rg&ab_channel=MichalStehl%C3%ADk");
+        }
+        if (val == "hanz"){
+          window.location.replace("https://www.turnov.cz/");
+        }
+        if (val == "tomas.kazda@pslib.cz"){
+          window.location.replace("https://www.youtube.com/watch?v=H49cjUqpb0w&ab_channel=Tom%C3%A1%C5%A1Kazda");
+        }
+      }
+      </script>
+  </head>
 <body class="bg-dark">
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: rgba(0, 0, 0, 0.637);">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="./Images/cyberpunk-logo.png" alt="logo hry cyberpunk" width="200" height="45">
+                <img src="./Images/cyberpunk-logo.png" alt="logo hry cyberpunk" width="170" height="40">
               </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,6 +50,169 @@
           </div>
         </div>
       </nav>
+      <div class="container">
+        <main>
+          <div class="py-5 text-center" style="color: aliceblue;"> 
+            <img class="d-block mx-auto mb-4" src="./Images/cyberpunk-cover.jpg" alt="" width="100%" style="max-width: 350px;">
+            <h2>Cena: 299,- Kč</h2>
+            <p class="lead mb-4">Právě nyní si můžete zakoupit 100% legální originální kopii hry Cyberpunk 2077. Stačí když vyplníte tento krátký formulář.</p>
+          </div>
+      
+          <div class="row g-5 row justify-content-md-center" style="color: aliceblue;">
+            <div class="col-md-7 col-lg-8">
+              <h4 class="mb-3">Billing address</h4>
+              <form class="needs-validation" novalidate="">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="firstName" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+                      Valid first name is required.
+                    </div>
+                  </div>
+      
+                  <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+                      Valid last name is required.
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+                    <div class="invalid-feedback">
+                      Please enter your shipping address.
+                    </div>
+                  </div>
+      
+                  <div class="col-12">
+                    <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+                    <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                  </div>
+      
+                  <div class="col-md-5">
+                    <label for="country" class="form-label">Country</label>
+                    <select class="form-select" id="country" required="">
+                      <option value="">Choose...</option>
+                      <option>Československo</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid country.
+                    </div>
+                  </div>
+      
+                  <div class="col-md-4">
+                    <label for="state" class="form-label">State</label>
+                    <select class="form-select" id="state" required="">
+                      <option value="">Choose...</option>
+                      <option>Česká republika</option>
+                      <option>Slovensko</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="zip" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="zip" placeholder="" required="">
+                    <div class="invalid-feedback">
+                      Zip code required.
+                    </div>
+                  </div>
+                </div>
+      
+                <hr class="my-4">
+      
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="same-address">
+                  <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+                </div>
+      
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="save-info">
+                  <label class="form-check-label" for="save-info">Save this information for next time</label>
+                </div>
+      
+                <hr class="my-4">
+      
+                <h4 class="mb-3">Payment</h4>
+      
+                <div class="my-3">
+                  <div class="form-check">
+                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+                    <label class="form-check-label" for="credit">Credit card</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
+                    <label class="form-check-label" for="debit">Debit card</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
+                    <label class="form-check-label" for="paypal">Platba ledvinami</label>
+                  </div>
+                </div>
+      
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <label for="cc-name" class="form-label">Name on card</label>
+                    <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                    <small class="text-muted">Full name as displayed on card</small>
+                    <div class="invalid-feedback">
+                      Name on card is required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-6">
+                    <label for="cc-number" class="form-label">Credit card number</label>
+                    <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                    <div class="invalid-feedback">
+                      Credit card number is required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="cc-expiration" class="form-label">Expiration</label>
+                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                    <div class="invalid-feedback">
+                      Expiration date required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="cc-cvv" class="form-label">CVV</label>
+                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                    <div class="invalid-feedback">
+                      Security code required
+                    </div>
+                  </div>
+                </div>
+      
+                <hr class="my-4">
+                <div class="order-md-last">
+                  <form class="card p-2">
+                    <div class="input-group">
+                      <input id="cuponinput" on type="text" class="form-control" onblur="getVal()" placeholder="Promo code">
+                      <button id="cuponbutton" type="submit" class="btn btn-secondary" onclick="getVal()">Redeem</button>
+                    </div>
+                  </form>
+                </div>
+                <button class="my-4 w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+              </form>
+            </div>
+          </div>
+        </main>
+      </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
