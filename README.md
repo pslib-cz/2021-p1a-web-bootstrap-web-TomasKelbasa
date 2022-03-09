@@ -5,12 +5,12 @@ Vytvořte vlastní malý web na libovolné (ideálně Vám blízké) téma pomoc
 
 Požadavky:
 
-* alespoň 3 vzájemně prolinkované stránky
-* jedna galerie s obrázky (např. pomocí prvků typu Card)
-* všechny stránky budou fungovat na telefonu, tabletu a desktopu
+* alespoň 3 vzájemně prolinkované stránky ANO
+* jedna galerie s obrázky (např. pomocí prvků typu Card) ANO
+* všechny stránky budou fungovat na telefonu, tabletu a desktopu ANO
 * použitý carousel ANO
 * použitý jumbotron (V Bootstrap5 je to tzv Hero) ANO
-* vytvořený formulář (kontaktní, registrační)
+* vytvořený formulář (kontaktní, registrační) ANO
 * sticky záhlaví stránky s menu ANO
 * zápatí stránky (např. https://mdbootstrap.com/docs/jquery/navigation/footer/#advanced) ANO
 * použití prvku media
